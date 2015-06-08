@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+function this($a, $b)
+{
+    print($a);
+    print($b);
+    print_r(func_get_args());
+    foreach(func_get_args() as $thing)
+    {
+        print($thing);
+    }
+    
+    call_user_func_array("this", array_merge([1, 4, 6], [3, 8 ,2, 0]));
+}
+
+?>
